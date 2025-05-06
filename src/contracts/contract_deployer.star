@@ -316,6 +316,7 @@ def deploy_contracts(
             "/network-data": op_deployer_configure.files_artifacts[0],
         },
         run=" && ".join(apply_cmds) + " 2>&1 | tee /network-data/op-deployer.log",
+        wait="540s" 
     )
 
     files = {"/network-data": op_deployer_output.files_artifacts[0]}
