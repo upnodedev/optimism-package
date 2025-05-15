@@ -54,10 +54,10 @@ We introduce customisation for private keys and signer information (address and 
 
 ### Run with your own configuration
 
-Kurtosis packages are parameterizable, meaning you can customize your network and its behavior to suit your needs by storing parameters in a file that you can pass in at runtime like so:
+Kurtosis packages are parameterizable, meaning you can customise your network and its behavior to suit your needs by storing parameters in a file that you can pass in at runtime like so:
 
 ```bash
-kurtosis run github.com/ethpandaops/optimism-package --args-file https://raw.githubusercontent.com/ethpandaops/optimism-package/main/network_params.yaml
+kurtosis run github.com/upnodedev/optimism-package --args-file https://raw.githubusercontent.com/upnodedev/optimism-package/main/network_params.yaml
 ```
 
 For `--args-file` parameters file, you can pass a local file path or a URL to a file.
@@ -75,7 +75,7 @@ This will stop and remove all running enclaves and **delete all data**.
 If you are attempting to test any changes to the package code, you can point to the directory as the `run` argument
 
 ```bash
-cd ~/go/src/github.com/ethpandaops/optimism-package
+cd ~/go/src/github.com/upnodedev/optimism-package 
 kurtosis run . --args-file ./network_params.yaml
 ```
 
@@ -461,7 +461,7 @@ optimism_package:
         game_type: 1
 
         # Interval between submitting L2 output proposals
-        proposal_internal: 10m
+        proposal_interval: 10m
 
       sequencer_params:
         # If using a testnet, use either a private key or signer information (signer_endpoint and signer_address), but not both
@@ -568,7 +568,7 @@ ethereum_package:
 
 ### Additional configuration recommendations
 
-#### L1 customization
+#### L1 customisation
 
 It is required for you to launch an L1 Ethereum node to interact with the L2 network. You can use the `ethereum_package` to launch an Ethereum node. The `ethereum_package` configuration is as follows:
 
@@ -602,7 +602,7 @@ ethereum_package:
     - blockscout
 ```
 
-#### L2 customization with Hard Fork transitions
+#### L2 customisation with Hard Fork transitions
 
 To spin up an L2 chain with specific hard fork transition blocks and any local docker image to run the EL/CL components,
 use the `network_params` section of your arguments file to specify the hard fork transitions and custom images.
