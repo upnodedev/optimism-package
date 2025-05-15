@@ -104,7 +104,8 @@ def get_batcher_config(
         "--rpc.port=" + str(BATCHER_HTTP_PORT_NUM),
         "--rpc.enable-admin",
         "--max-channel-duration="
-        + str(altda_deploy_config.da_batch_submission_frequency),
+        + str(5 * altda_deploy_config.da_batch_submission_frequency),
+        # There are 5 l1 blocks per minute, so convert it from minutes to blocks
         "--l1-eth-rpc=" + l1_config_env_vars["L1_RPC_URL"],
         "--altda.enabled=" + str(da_server_context.enabled),
         "--altda.da-server=" + da_server_context.http_url,

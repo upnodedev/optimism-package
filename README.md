@@ -159,7 +159,7 @@ optimism_package:
     # Specifies how transactions are posted. Allows auto, blobs calldata or custom. 
     da_type: "calldata" 
 
-    # Determines how frequently the batcher submits aggregated transaction data to L1 (via the batcher transaction).
+    # Determines how frequently (in minutes) the batcher submits aggregated transaction data to L1 (via the batcher transaction).
     da_batch_submission_frequency: 1
 
     # Represents the L1 address of the DataAvailabilityChallenge contract.
