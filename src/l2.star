@@ -37,7 +37,6 @@ def launch_l2(
     # because op-batcher and op-node(s) need to know the da-server url, if present
     da_server_context = da_server_launcher.disabled_da_server_context()
 
-
     if "da_server_test" in l2_args.additional_services:
         plan.print("Launching test da-server")
         da_server_context = da_server_launcher.launch_da_server(
@@ -54,8 +53,6 @@ def launch_l2(
             l2_args.da_server_params.server_endpoint,
         )
         plan.print("Successfully added da-server endpoint")
-
-
 
     l2 = participant_network.launch_participant_network(
         plan,
