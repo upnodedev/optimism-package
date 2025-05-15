@@ -1,6 +1,6 @@
-name: github.com/ethpandaops/optimism-package
+name: github.com/upnodedev/optimism-package
 description: |
   # Optimism Package
-  This is a Kurtosis package for deploying an Optimism Rollup
+  This is a Kurtosis package for deploying an Optimism Rollup, built for UpRoll CLI
 replace:
   github.com/ethpandaops/ethereum-package: github.com/ethpandaops/ethereum-package@4.5.0
