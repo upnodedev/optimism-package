@@ -82,8 +82,8 @@ def run(plan, args={}):
             "L1_CHAIN_ID": external_l1_args.network_id,
         }
 
-        plan.print("Waiting for network to sync")
-        wait_for_sync.wait_for_sync(plan, l1_config_env_vars)
+        # plan.print("Waiting for network to sync")
+        # wait_for_sync.wait_for_sync(plan, l1_config_env_vars)
     else:
         plan.print("Deploying a local L1")
         l1 = ethereum_package.run(plan, ethereum_args)
